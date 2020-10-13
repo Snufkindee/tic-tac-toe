@@ -6,14 +6,16 @@ main {
   margin-top: 6rem;
 
   @media only screen and (max-width: 45em) {
+    grid-template-columns: repeat(3, 10rem);
     margin-top: 3rem;
   }
 }
 
 .container {
+  height: 100vh;
   padding: 2rem;
   background: $bg-light;
-  height: 100%;
+  max-height: fit-content;
   text-align: center;
 }
 
@@ -66,4 +68,7 @@ main {
 
 app-cell {
   height: 15rem;
+  @media only screen and (max-width: 45em) {
+    height: 10rem;
+  }
 }
