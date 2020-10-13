@@ -1,0 +1,43 @@
+<div
+  class="container"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutAlign.lt-md="center center"
+>
+  <div class="game-info" fxFlex="50%">
+    <h1 class="title">Tic-Tac-Toe</h1>
+    <h2 *ngIf="!winner && !isDraw" class="info">
+      <span
+        [ngClass]="{
+          'player-x': getXO === 'X',
+          'player-o': getXO === 'O'
+        }"
+        >{{ getXO }}</span
+      >'s Turn
+    </h2>
+    <h2 *ngIf="winner" class="info">
+      <span
+        [ngClass]="{
+          'player-x': winner === 'X',
+          'player-o': winner === 'O'
+        }"
+        >{{ winner }}</span
+      >
+      wins!
+    </h2>
+    <h2 *ngIf="isDraw" class="info">It's a draw</h2>
+  </div>
+
+  <div class="grid">
+    <main>
+      <app-cell
+        *ngFor="let cell of cells; let i = index"
+        [cell]="cell"
+        [disabled]="boardDisabled"
+        (click)="takeTurn(i)"
+      ></app-cell>
+    </main>
+    <app-score></app-score>
+    <button mat-raised-button (click)="reset()" class="ng-btn">New Game</button>
+  </div>
+</div>

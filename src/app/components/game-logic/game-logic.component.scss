@@ -1,0 +1,65 @@
+@import "variables";
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+  margin-top: 6rem;
+
+  @media only screen and (max-width: 45em) {
+    margin-top: 3rem;
+  }
+}
+
+.container {
+  background: $bg-light;
+  padding: 5rem;
+  height: 100%;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-family: "Helvetica Neue", cursive;
+  font-weight: 600;
+  font-size: 5rem;
+  padding-top: 3rem;
+  @media only screen and (max-width: 45em) {
+    padding-top: 1.5rem;
+  }
+}
+
+.player-x {
+  font-weight: 750;
+  color: $x-primary;
+}
+
+.player-o {
+  font-weight: 750;
+  color: $o-primary;
+}
+
+.info {
+  color: white;
+  font-weight: 300;
+  font-size: 4rem;
+  padding-top: 2rem;
+  @media only screen and (max-width: 45em) {
+    font-size: 2.6rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ng-btn {
+  background-color: $new-game;
+  margin: 2rem;
+  color: #fff;
+  @media only screen and (max-width: 45em) {
+    margin: 0 1rem 6rem 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+app-cell {
+  height: 15rem;
+}

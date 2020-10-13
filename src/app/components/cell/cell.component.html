@@ -1,0 +1,11 @@
+<button
+  [disabled]="disabled"
+  [ngClass]="{
+    empty: !cell,
+    x: cell && cell.player === 'X' && !cell.win,
+    o: cell && cell.player === 'O' && !cell.win,
+    win: cell && cell.win
+  }"
+>
+  {{ cell && cell.player }}
+</button>
