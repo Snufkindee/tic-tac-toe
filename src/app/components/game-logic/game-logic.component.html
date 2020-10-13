@@ -1,10 +1,10 @@
 <div
   class="container"
   fxLayout="column"
-  fxLayoutAlign="center center"
-  fxLayoutAlign.lt-md="center center"
+  fxLayoutAlign="space-evenly center"
+  fxLayout.lt-md="center center"
 >
-  <div class="game-info" fxFlex="50%">
+  <div class="game-info" fxFlex="1 1 50%">
     <h1 class="title">Tic-Tac-Toe</h1>
     <h2 *ngIf="!winner && !isDraw" class="info">
       <span
