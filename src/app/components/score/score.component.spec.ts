@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ScoreService } from 'src/app/services/score.service';
 
 import { ScoreComponent } from './score.component';
 
@@ -8,9 +9,9 @@ describe('ScoreComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScoreComponent ]
-    })
-    .compileComponents();
+      declarations: [ScoreComponent],
+      providers: [ScoreService],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
